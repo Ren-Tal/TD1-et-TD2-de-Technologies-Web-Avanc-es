@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+/* Navigation */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+nav input[type="search"] {
+    flex: 1;
+    min-width: 180px;
+    max-width: 320px;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+nav input[type="search"]:focus {
+    border-color: #888;
+}
+
+/* Remplace "section {" par : */
+section.produits {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Carte produit */
+article {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    min-height: 250px;
+    min-width: 200px;
+    max-width: 300px;
+    max-height: 400px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+article h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+article p:nth-of-type(1) {
+    font-size: 13px;
+    color: #666;
+}
+
+article p:nth-of-type(2) {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+article p:nth-of-type(3) {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background-color: #eaf3de;
+    color: #3b6d11;
+    align-self: flex-start;
+}
+
+/* Image produit */
+article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 4px;
+}
+
+
+/* Et remplace "section.section-form {" par : */
+section.section-form {
+    display: block;   /* ← annule le flex hérité */
+    padding: 1.5rem;
+}
+
+.formulaire {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="number"],
+.formulaire select {
+    width: 100%;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.formulaire input:focus,
+.formulaire select:focus {
+    border-color: #888;
+}
+
+.formulaire button[type="submit"] {
+    align-self: flex-start;
+    padding: 0.45rem 1.1rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.formulaire button:hover {
+    background-color: #333;
+}
+
+.formulaire input[type="file"] {
+    width: 100%;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.formulaire input[type="file"]::file-selector-button {
+    padding: 0.35rem 0.9rem;
+    margin-right: 0.75rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.formulaire input[type="file"]::file-selector-button:hover {
+    background-color: #333;
+}
+
+
+/* Statuts dynamiques */
+.statut-stock {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background-color: #eaf3de;
+    color: #3b6d11;
+    align-self: flex-start;
+}
+
+.statut-epuise {
+    display: inline-block;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background-color: #fbe1e1;
+    color: #a32626;
+    align-self: flex-start;
+}
+
+/* Message aucun résultat */
+#aucun-resultat {
+    text-align: center;
+    color: #666;
+    padding: 1rem 1.5rem;
+    font-size: 14px;
+}
+
+/* Bouton upload image */
+.formulaire input[type="file"] {
+    width: 100%;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.formulaire input[type="file"]::file-selector-button {
+    padding: 0.35rem 0.9rem;
+    margin-right: 0.75rem;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.formulaire input[type="file"]::file-selector-button:hover {
+    background-color: #333;
+}
+
+/* Filtre statut + prix min/max dans la nav */
+nav select,
+nav input[type="number"] {
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+nav select {
+    cursor: pointer;
+}
+
+nav input[type="number"] {
+    width: 130px;
+}
+
+nav select:focus,
+nav input[type="number"]:focus {
+    border-color: #888;
+}

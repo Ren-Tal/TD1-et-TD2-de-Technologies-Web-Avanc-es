@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gestionnaire de Stock</title>
+        <link rel="stylesheet" href="phase2.css">
+        <script src="phase3.js" defer></script>
+    </head>
+    <body>
+        <nav>
+            <h1>Gestionnaire de Stock</h1><br></br>
+            <input type="search" placeholder="Rechercher un produit... " id="recherche"><br></br>
+            <select id="filtre">
+                <option value="">Filtrer par statut</option>
+                <option value="En stock">En stock</option>
+                <option value="Épuisé">Épuisé</option>
+            </select>
+            <input type="number" placeholder="Prix minimum" id="prixMin" min="0" max="1000" step="10">
+            <input type="number" placeholder="Prix maximum" id="prixMax" min="0" max="1000" step="10">
+        </nav>
+        <section class="produits" id="produits">
+            <article id="1">
+                <h3>Clavier Mecanique</h3>
+                <p>clavier mecanique bon etat</p>
+                <p>Prix: 49.99 €</p>
+                <p class="statut-stock">status: En stock</p>
+                <img src="clavier.jpg" alt="Image du clavier" width="200" height="150">
+            </article>
+            <article id="2">
+                <h3>Souris</h3>
+                <p>souris bon etat</p>
+                <p>Prix: 29.99 €</p>
+                <p class="statut-stock">status: En stock</p>
+                <img src="souris.jpg" alt="Image de la souris" width="200" height="150">
+            </article>
+        </section>
+        <p id="aucun-resultat" style="display:none;">Aucun produit ne correspond à votre recherche.</p>
+        <section class="section-form">
+            <form class="formulaire" id="formulaire">
+                <h2>Ajouter un produit</h2><br></br>
+                <input type="text" placeholder="Nom du produit" id="Nom"><br></br>
+                <input type="text" placeholder="Description du produit" id="Description"><br></br>
+                <input type="number" placeholder="Prix du produit" id="Prix"><br></br>
+                <select id="Status">
+                    <option value="">Sélectionner un statut</option>
+                    <option value="En stock">En stock</option>
+                    <option value="Épuisé">Épuisé</option>
+                </select><br></br>
+                <input type="file" placeholder="Image du produit" id="Image" accept="image/*"><br></br>
+                <button type="submit" value="Ajouter le produit">
+                    Ajouter le produit
+                </button>
+            </form>
+        </section>
+    </body>
+</html>
